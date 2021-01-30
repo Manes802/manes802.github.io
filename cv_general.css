@@ -1,0 +1,114 @@
+@font-face
+{
+	font-family: Snowinter;
+	src: url('Snowinter-Free-For-Personal-Use.otf') format('otf'),
+		 url('Snowinter-Free-For-Personal-Use.ttf') format('truetype');
+
+	font-weight: normal;
+	font-style: normal; 
+}
+@font-face
+{
+	font-family: Excelate;
+	src: url('polices/excelate.ttf') format('truetype');
+
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face
+{
+	font-family: Gunv2;
+	src: url('polices/gunv2e.ttf') format('truetype');
+
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face
+{
+	font-family: AirAmerica;
+	src: url('polices/AirAmerica-Regular.otf') format('otf');
+
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face
+{
+	font-family: Harrie;
+	src: url('polices/Harrie.ttf') format('truetype');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'amblebold';
+    src: url('polices/Amble-Bold-webfont.eot');
+    src: url('polices/Amble-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('polices/Amble-Bold-webfont.woff2') format('woff2'),
+         url('polices/Amble-Bold-webfont.woff') format('woff'),
+         url('polices/Amble-Bold-webfont.ttf') format('truetype'),
+         url('polices/Amble-Bold-webfont.svg#amblebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'sinkin_sans700_bold';
+    src: url('polices/SinkinSans-700Bold-webfont.eot');
+    src: url('polices/SinkinSans-700Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('polices/SinkinSans-700Bold-webfont.woff2') format('woff2'),
+         url('polices/SinkinSans-700Bold-webfont.woff') format('woff'),
+         url('polices/SinkinSans-700Bold-webfont.ttf') format('truetype'),
+         url('polices/SinkinSans-700Bold-webfont.svg#sinkin_sans700_bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'bodonitownregular';
+    src: url('polices/Bodonitown-webfont.eot');
+    src: url('polices/Bodonitown-webfont.eot?#iefix') format('embedded-opentype'),
+         url('polices/Bodonitown-webfont.woff2') format('woff2'),
+         url('polices/Bodonitown-webfont.woff') format('woff'),
+         url('polices/Bodonitown-webfont.ttf') format('truetype'),
+         url('polices/Bodonitown-webfont.svg#bodonitownregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body
+{	
+	font-family: Bahnschrift, cambria, calibri, serif;
+	font-size: 1.2em;
+	background-color: rgb(240,240,240);
+}
+
+#bloc_page
+{
+	width: 97%;
+	margin: auto;
+}
+
+/*MEDIA QUERI*/
+@media all and (max-device-width: 480px)
+{
+    body
+    {   
+        font-size: 0.9em;
+    }
+    #bloc_page
+    {
+        width: auto;
+    }
+}
+@media screen and (max-width: 1024px)
+{
+    body
+    {   
+        font-size: 1em;
+    }
+    #bloc_page
+    {
+        width: auto;
+    }
+}
