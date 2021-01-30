@@ -1,0 +1,29 @@
+body
+{
+	text-align: center;
+	background: url('lion.jpg') no-repeat;
+	background-size: cover;
+
+	font-family: cambria, arial;
+}
+h1
+{
+	font-size: 5em;
+	color: rgb(0,162,236);
+}
+p, a
+{
+	font-size: 1.5em;
+	color: black;
+	font-style: italic;
+}
+a
+{
+	font-size: 1em;
+	text-decoration: blink;
+	color: rgba(255,22,22,0.6);
+}
+a:hover
+{
+	color: rgb(0,162,236);
+}
