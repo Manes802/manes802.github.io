@@ -1,0 +1,98 @@
+header
+{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+	justify-content: space-between;
+	align-items: flex-start;
+
+	width: auto;
+	margin-left: 155px;
+
+	/*border: 2px solid black;*/
+	border-bottom: 1px solid rgb(200,200,200);
+	border-radius: 0px 0px 50px 50px;
+	overflow: hidden;
+}
+header .photo:nth-child(2)
+{
+	align-self: flex-end;
+
+	width: 130px;
+	height: 100px;
+	border: 2px solid rgba(213,183,43,0.6);
+	box-shadow: 2px 2px 6px rgba(213,183,43,0.6);
+}
+header .mon_nom
+{ 
+	font-family: Gunv2, Snowinter, "Bauhaus 93", cambria, calibri, serif;
+	color: rgb(0,92,185);
+	font-size: 1.4em;
+	text-shadow: 8px 7px 6px rgba(0,92,185,0.6);
+}
+header .mon_titre
+{
+	font-family: Vivaldi, 'Informal Roman', 'bodonitownregular', arial, AirAmerica, sans-serif;
+	font-size: 2em;
+	color: rgba(82,192,202,5);
+	font-weight: bold;
+}
+
+
+/*MEDIA QUERI POUR MOBILE*/
+@media all and (max-device-width: 480px)
+{
+  	header
+	{
+		border-radius: 0px;
+		margin-left: 0px;
+		width: auto;
+	}
+	header .mon_nom
+	{ 
+		margin-bottom: 5px;
+		max-width: 300px; 
+		font-size: 1.5em;
+		text-shadow: 8px 7px 6px rgba(0,92,185,0.6);
+	}
+	header .photo:nth-child(2)
+	{
+		display: none
+	}
+	header .mon_titre
+	{
+		text-align: center;
+		font-family: cambria, 'Informal Roman', 'bodonitownregular', arial, AirAmerica, sans-serif;
+		font-size: 1em;
+		width: auto;
+	}
+}
+/*MEDIA QUERI POUR FENETRE INFERIEUR A 1024PX*/
+@media screen and (max-width: 1024px)
+{
+  	header
+	{
+		border-radius: 0px;
+		margin-left: 0px;
+		width: auto;
+	}
+	header .mon_nom
+	{ 
+		margin-bottom: 5px;
+		max-width: 300px; 
+		font-size: 1.5em;
+		text-shadow: 8px 7px 6px rgba(0,92,185,0.6);
+	}
+	header .photo:nth-child(2)
+	{
+		display: none
+	}
+	header .mon_titre
+	{
+		text-align: center;
+		font-family: cambria, 'Informal Roman', 'bodonitownregular', arial, AirAmerica, sans-serif;
+		font-size: 1em;
+		width: auto;
+	}
+}
