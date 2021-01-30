@@ -1,0 +1,80 @@
+footer
+{
+	display: flex;
+	background: url('images/ico_top.png') no-repeat top center, 
+				url('images/separateur.png') repeat-x top,
+				url('images/ombre.png') repeat-x top;
+}
+
+footer p, footer ul
+{
+    font-size: 0.8em;
+}
+footer h1
+{
+    font-size: 1.1em;
+}
+.mon_tweet
+{
+    width: 28%;
+}
+.mes_photos
+{
+    width: 35%;
+}
+.mes_amis
+{
+    width: 31%;
+    margin-left: 5px;
+}
+
+.mes_photos img
+{
+    border: 1px solid #181818;
+    margin-right: 2px;
+}
+.liste_amis
+{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0px;
+}
+.mes_amis ul
+{
+    list-style-image: url('images/ico_liensexterne.png');
+    padding-left: 2px;
+}
+.mes_amis a
+{
+    text-decoration: none;
+    color: #760001;
+}
+
+
+/*MEDIA QUERIES*/
+@media all and (max-width: 1024px)
+{
+    footer
+    {
+        flex-direction: column;
+        background: url('images/separateur.png') repeat-x top;
+    }
+    .mon_tweet
+    {
+        width: auto;
+    }
+    .mes_photos
+    {
+        width: auto;
+    }
+    .mes_amis
+    {
+        width: auto;
+        margin-left: 0px;
+    }
+    .mes_amis ul
+    {
+        list-style-image: url('images/ico_liensexterne.png');
+        padding-left: 12px;
+    }
+}  
