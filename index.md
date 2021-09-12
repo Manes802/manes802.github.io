@@ -117,7 +117,7 @@
 			<script src="bootstrap/js/bootstrap.bundle.js"></script>
 
 			<ul >
-				<li class="titre_liste"><a href="blog/blog.html">Blog</a></li>
+				<li class="titre_liste"><a href="Blog/blog.html">Blog</a></li>
 				<li><div class="rond_separateur"></div><a href="jeu_pendu.zip" class="titre_liste">Réalisations</a></li>
 				<li><div class="rond_separateur"></div><span class="titre_liste">Centre d'intérêt</span>
 					<ul class="sous_liste">
