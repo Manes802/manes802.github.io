@@ -1,0 +1,123 @@
+/*reset*/
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+/*Partie information personnel*/
+#block_info_perso{
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+#my_name{
+	margin-top: 10px;
+}
+
+#block_info_perso, #block_coordonnee, #block_coordonnee a{
+	color: rgb(250, 250, 250);
+}
+
+/*lien a*/
+a:focus, button:focus{
+	outline: 0;
+}
+#fr:hover, #en:hover{
+	color: rgb(0, 162, 232);
+}
+
+/*Les cartes*/
+#carte_1, #carte_2, #carte_3
+{
+	margin-top: 15px;
+	box-shadow: 6px 6px 15px rgba(0, 162, 232, 0.4);
+}
+
+/*Pied de page*/
+footer{
+	margin-top: 20px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	font-weight: normal;
+	font-size: 18px;
+}
+footer ul li{
+	display: inline-block;
+	margin-right: 50px;
+	vertical-align: text-top;
+	color: rgb(0, 162, 232);
+}
+footer ul .last_item{
+	margin-right: 0px;
+}
+footer .titre_liste{
+	text-decoration: underline;
+}
+
+footer .sous_liste li
+{
+	display: block;
+	list-style-type: circle;
+	font-size: 13px;
+	margin: 0px;
+}
+
+footer a{
+	color: rgb(0, 162, 232);
+}
+footer a:hover{
+	color: rgb(153, 217, 234);
+}
+/*Le rond separant les éléments du pied*/
+footer .rond_separateur{
+	position: relative;
+	right: 25px;
+	display: inline-block;
+	background-color: rgb(0, 162, 232) ;
+	width: 8px;
+	height: 8px;
+	border-radius: 10px;
+}
+
+/*LES MISES EN PAGE ADAPTATIVE POUR PETITE ECRAN*/
+@media (min-width: 720px){
+	#ligne_carte
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	#carte_1, #carte_2, #carte_3
+	{
+		max-width: 30%;
+	}
+	#sous_carte_1, #sous_carte_2,  #sous_carte_3 
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+}
+
+@media (max-width: 705px)
+{
+	footer
+	{
+		align-items: flex-start;
+		height: auto;
+		padding-top: 15px;
+	}
+	footer ul li{
+		display: block;
+		margin-right: 0px;
+		list-style-type: none;
+	}
+	footer .rond_separateur
+	{
+		display: none;
+	}
+}
