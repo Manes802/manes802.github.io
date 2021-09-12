@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Les pointeurs en langage C</title>
+		<meta charset="utf-8"/>
+
+		<!--Mentions CDN (Content Delivery Network) pour activer les composants Bootstrap sur les navigateurs -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<!-- metadonnée pour les mobiles...concernant l'affichage du site -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- lien vers les fichiers bootstrap css -->
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+		<!-- Lien vers la feuille de style du site -->
+		<link rel="stylesheet" type="text/css" href="blog.css">
+
+		<!-- metadonnée pour IE afin de prendre en compte les derniers version du moteur de rendu -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	</head>
+
+										<!-- ## CORPS DU BLOG ## -->
+	<body>
+		<!-- ## En-tête de la page ## -->
+		<div class="container-fluid">
+			<header class="row bg-dark">
+				<nav class="col-12 navbar navbar-expand-md navbar-dark">
+					<a href="blog.html" class="navbar-brand font-weight-bold">Blog.manes</a>
+					<!-- Active le bouton de navigation responsive -->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+	      				<var class="navbar-toggler-icon"></var>
+	   				</button>
+	   				<div id="navbarContent" class="collapse navbar-collapse">
+						<ul class="navbar-nav">
+							<li class="nav-item"><a href="../index.md" class="nav-link" id="fr">CV</a></li>
+							<li class="nav-item active"><a href="blog.html" class="nav-link" id="en">Blog</a></li>
+						</ul>
+					</div>
+				</nav>					
+			</header>
+		</div>
+		<!-- ## /FIN En-tête de la page ## -->
+		
+		<!-- Contenu principal du blog -->
+		<div class="container">
+			<div class="jumbotron">
+				<h1 class="font-weight-bold text-center">Les pointeurs en langage C</h1>
+			</div>
+
+			<!-- Debut de la SECTION-->
+			<section class="row">
+				<!--Debut de l'article sur les pointeurs ARTICLE-->
+				<article class="col-12 col-lg-9">
+					<h2 class="font-weight-bold">
+						<img src="../img/ico_epingle.png" alt="Epingle" id="epingle" class="img-fluid">
+						Je vous explique les pointeurs en C
+					</h2>
+
+					<p class="text-justify">
+						Les pointeurs sont des variables un peu différentes des autres variables. Un pointeur est une variable qui a pour valeur l’adresse d’une autre variable : On dit généralement qu’un pointeur pointe sur une variable.<br>
+						Pour faire une analogie, on dira que le pointeur est comme un téléphone, ou plus précisément une carte SIM, dans lequel on insert l’adresse de nos variables. Tout comme la carte SIM stock l'adresse de nos correspondants pour qu'on puisse les contacter, de même, le pointeur stock l’adresse d’une variable pour pouvoir ensuite l’appeler.
+					</p>
+
+					<fieldset>
+						<legend class="font-weight-bold">Exemple</legend>
+                    	<p class="text-justify">
+                    		Je crée une variable nommée <code><var>taille_user</var></code> de type <span class="text-info">double</span> qui va contenir la taille de l’utilisateur de mon programme par exemple, et je crée aussi un pointeur nommé <code><var>pointe_taille_user</var></code> de type <span class="text-info">double</span> (naturellement) qui pointe sur la variable <code><var>taille_user</var></code>.
+                    	</p>
+                    	<h2 class="font-weight-bold">Le code</h2>
+     					<p class="bg-dark conteneur_code">
+	                    	<code><span class="text-info">double</span> <var>taille_user</var> <span class="text-light">=</span> <var class="valeur">1.72</var><span class="text-light">;</span> <span class="text-muted">//déclaration et initialisation de la variable taille_user.</span></code><br>
+							<code><span class="text-info">double</span> <var>*pointe_taille_user</var> <span class="text-light">=</span> <var class="adresse">&taille_user</var><span class="text-light">;</span> <span class="text-muted">//déclaration et initialisation du pointeur pointe_taille_user.</span></code>
+						</p>
+	                    		
+                    	<p class="text-justify">
+                    		Comme montre le code, le pointeur contient l’adresse de la variable. Le symbole <code><strong>*</strong></code> permet juste de signifier que c’est un pointeur.
+                    	</p>
+                    </fieldset>
+
+                    <p class="text-justify">En mémoire nous aurons (sans tenir compte du nombre d’octet du type double) :</p>
+                    <table class="table table-dark table-striped text-center">
+                    	<tr>
+                    		<th colspan="2">La variable (taille_user)</th>
+                    		<th colspan="2">Le pointeur (pointe_taille_user)</th>
+                    	</tr>
+                    	<tr>
+							<th>Adresse</th>
+                    		<th>Valeur</th>
+                    		<th>Adresse</th>
+                    		<th>Valeur</th>
+                    	</tr>
+                    	<tr>
+                    		<td>………</td>
+                    		<td>Autre valeur</td>
+                    		<td>………</td>
+                    		<td>Autre valeur</td>
+                    	</tr>			
+                    	<tr>
+                    		<td>11A2E</td>
+                    		<td>1.72</td>
+                    		<td>15F91</td>
+                    		<td>11A2E</td>
+                    	</tr>
+                    	<tr>
+                    		<td>11A2F</td>
+                    		<td>Autre valeur</td>
+                    		<td>15F92</td>
+                    		<td>Autre valeur</td>
+                    	</tr>
+                    	<tr>
+                    		<td>………</td>
+                    		<td>Autre valeur</td>
+                    		<td>………</td>
+                    		<td>Autre valeur</td>
+                    	</tr>
+                    </table>
+
+                    <p class="text-justify">
+                    	Hé oui ! Un pointeur a aussi le droit d’avoir une adresse : ce n’est pas parce qu’il contient une adresse qu’il ne doit pas avoir sa propre adresse.<br>
+						Etant donné que le pointeur contient l’adresse d’une variable, il peut nous permettre de connaitre et de modifier la valeur de la variable dont il pointe (très avantageux).
+					</p>
+
+					<div>
+						<legend class="font-weight-bold">Voici quelques syntaxes à connaitre sur les pointeurs</legend>
+						<div class="bg-dark conteneur_code">
+							<code>
+								<span class="text-muted">//déclaration d’un pointeur.</span><br>
+								<span class="text-info">type (de la variable à pointer)</span> <var>*nom_du_pointeur</var> <span class="text-light">;</span><br>
+								<span class="text-muted">//CONSIDERONS LA VARIABLE DE L’EXEMPLE PRECEDENT.</span><br>
+								<span class="text-info">double</span> <var>*pointe_taille_user</var> <span class="text-light">;</span> <span class="text-muted">/*déclaration d’un pointeur de type double. On peut également l’initialiser à NULL (ce qui est d’ailleurs conseillé)  comme ceci double :  *pointe_taille_user = NULL ;*/</span><br>
+								<var>pointe_taille_user</var> <span class="text-light">;</span> <span class="text-muted">/*n’est rien d’autre que la valeur du pointeur (adresse de la variable) donc pas de différence avec une variable simple. On peut l’utiliser dans un printf pour voir l’adresse de la variable.*/</span><br>
+								<var>&pointe_taille_user</var> <span class="text-light">;</span> <span class="text-muted">/*La encore comme vous pouvez le deviner, c’est l’adresse de notre pointeur, pareil avec les simples variables*/</span><br>
+								<var>*pointe_taille_user</var> <span class="text-light">;</span> <span class="text-muted">/*Seule différence. *pointe_taille_user (non précédé par le type) est le contenu de la variable dont le pointeur pointe. En d’autre terme, *pointe_taille_user = taille_user.*/</span>
+							</code>
+						</div>
+					</div>
+
+					<p class="text-right"><em>Manes 802.11</em></p>
+				</article>
+				<!--/Fin de l'article sur les pointeurs ARTICLE-->
+
+				<!-- A PROPOS DE L'AUTEUR-->
+				<aside class="col-12 col-lg-3">
+					
+						<h2 class="h5 font-weight-bold text-light text-center">A PROPOS DE L'AUTEUR</h2>
+						<img src="../img/manes_photo.png" alt="Photo Manes" class="img-fluid mx-auto d-block">
+						<p class="text-justify text-light first-para">
+							Je me surnomme <strong>Manes</strong>, et si vous voulez bien appelez moi <strong><em>Manes 802.11m</em></strong>. Je suis né un 23 avril.
+						</p>
+	                    <p class="text-justify text-light">
+	                    	C'est mon premier pas dans le monde du web... et je compte continuer jusqu'à atteindre le hight level de la programmation web.
+	                    </p>
+
+	                    <div class="lien_reseau_sociaux">
+	                    	<a href="mailto:hermandjakamid@gmail.com"><img src="../img/icons_gmail2.png" alt="Gmail" id="mail"></a>
+	                    	<a href="#"><img src="../img/icons_whatsapp.png" alt="Whatsapp" id="whatsapp" width="50px" height="50px"></a>
+	                    	<a href="https://www.facebook.com" target="target_blank"><img src="../img/icons_face.png" alt="facebook" id="youtube" ></a>
+	                    </div>
+					
+				</aside>
+			</section>
+			<!-- /Fin de la SECTION-->
+		</div>
+		<div class="bg-dark" id="contour_footer">
+		<div class="container bg-dark">
+			<footer class="row text-light">
+				<!--Mentions pour la partie JS et JQuery -->
+				<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+				<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+				<!--Déclaration des bibliothèques jquery et javascript -->
+				<script src="../jquery-3.3.1.min.js"></script>
+				<script src="../bootstrap/js/bootstrap.bundle.js"></script>
+
+				<div class="col-12 col-lg-4 mon_tweet">
+					<h1 class="h2 font-weight-bold">Mon dernier tweet</h1>
+	                  <p>RAS !</p>
+	                  <p>le 12 septembre 2021 à 14h37</p>
+				</div>
+				<div class="col-12 col-lg-4 mes_photos">
+					<h1 class="h2 font-weight-bold">Mes photos</h1>
+	                <div>
+	                	<img src="../img/photo1.jpg" alt="Photographie" width="69" height="69" />
+	                    <img src="../img/photo2.jpg" alt="Photographie" width="69" height="69" />
+	                    <img src="../img/photo3.jpg" alt="Photographie" width="69" height="69" />
+	                    <img src="../img/photo4.jpg" alt="Photographie" width="69" height="69" />
+	                </div>
+				</div>
+				<div class="col-12 col-lg-4 mes_amis">
+					<h1 class="h2 font-weight-bold">Mes amis</h1>
+					<div class="liste_amis">
+						<ul>
+		                    <li><a href="../img/timon.png" target="target_blank">Timon</a></li>
+		                    <li><a href="../img/tom.jpg" target="target_blank">Tom Cat</a></li>
+		                    <li><a href="../img/jerry.jpg" target="target_blank">Jerry Mouse</a></li>
+		                    <li><a href="../img/johan_pirloui.jpg" target="target_blank">Johan et Pirloui</a></li>
+		                </ul>
+
+		                <ul>
+		                    <li><a href="../img/simba.jpg" target="target_blank">Simba</a></li>
+		                    <li><a href="../img/obelix.jpg" target="target_blank">Asterix et Obelix</a></li>
+		                    <li><a href="../img/lucy_luck.jpg" target="target_blank">Lucky Luke</a></li>
+		                    <li><a href="../img/tintin-milou.jpg" target="target_blank">Tintin et Milou</a></li>
+		                </ul>
+		           	</div>
+				</div>
+			</footer>
+		</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+/*reset*/
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+ /*les liens*/
+a:focus, button:focus{
+	outline: 0;
+}
+#fr:hover, #en:hover{
+	color: rgb(0, 162, 232);
+}
+
+.conteneur_code{
+	padding: 3px 0px 3px 10px;
+}
+
+/*Partie information sur l'auteur (aside)*/
+aside{
+	padding-top: 10px;
+	background-color: rgb(0, 87, 174);
+	color: white;
+}
+.first-para
+{
+	padding-top: 5px;
+}
+.lien_reseau_sociaux
+{
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 10px;
+}
+
+/*pied de la page*/
+footer ul{
+	display: inline-block;
+}
+#contour_footer{
+	width: 100%;
+	margin-top: 5px;
+	padding-top: 5px;
+}
