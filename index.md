@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+				<!-- ### EN-TETE DE LA PAGE : Les metadonnées et lien vers les fichiers CSS et autres ### -->
+	<head>
+		<meta charset="utf-8">
+		<title>Curriculum Vitae</title>
+
+		<!--Mentions CDN (Content Delivery Network) pour activer les composants Bootstrap sur les navigateurs -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<!-- metadonnée pour les mobiles...concernant l'affichage du site -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- lien vers les fichiers bootstrap css -->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+		<!-- Lien vers la feuille de style du site -->
+		<link rel="stylesheet" type="text/css" href="style_cv.css">
+
+		<!-- metadonnée pour IE afin de prendre en compte les derniers version du moteur de rendu -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	</head>
+
+				<!-- ### CORP DE LA PAGE ### -->
+	<body>
+		
+		<div class="container-fluid">
+			<!-- DEBUT DE L'EN-TETE DE LA PAGE CV : Elle contient les boutons de navigation -->
+			<header class="row bg-dark">
+				<nav class="col navbar navbar-expand-md navbar-dark">
+					<a href="index.md" class="navbar-brand font-weight-bold">Cv.manes</a>
+					<!-- Active le bouton de navigation responsive -->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+      					<span class="navbar-toggler-icon"></span>
+   					</button>
+   					<div id="navbarContent" class="collapse navbar-collapse">
+						<ul class="navbar-nav">
+							<li class="nav-item active"><a href="index.md" class="nav-link" id="fr">Français</a></li>
+							<li class="nav-item"><a href="page_en/cv_en.html" class="nav-link" id="en">Anglais</a></li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+			<!-- /FIN DE L'EN-TETE DE LA PAGE CV -->
+		</div>
+			
+		<!-- PARTIE information personnel : Photo, nom et coordonnées -->
+		<div class="bg-info container-fluid" id="block_info_perso">
+			<div class="row">
+				<div class="col-12">
+					<img src="img/manes_photo.png" alt="manes 802" class="rounded-circle mx-auto d-block img-fluid">
+				</div>
+			</div>
+			<h1 class="row text-left text-sm-center" id="my_name">
+				<span class="h3 col-12 font-weight-bold">DAGBEGNON HERMAN DJAKAMI</span>
+			</h1>
+			<div class="row text-left text-md-center" id="block_coordonnee">
+				<div class="col-12 col-md-3 text-truncate">
+					<img src="img/icone_domicile.png" alt="domicile" class="img-fluid"> N'Djamena / Tchad
+				</div>
+				<div class="col-12 col-md-3 text-truncate">
+					<img src="img/icone_cell.png" alt="cellulaire" class="img-fluid"> (+235) 63680815 / 90161526
+				</div>
+				<div class="col-12 col-md-3 text-truncate">
+					<a href="mailto:hermandjakamid@gmail.com" target="target_blank"><img src="img/icone_mail.png" alt="@mail" class="img-fluid"> hermandjakamid@gmail.com</a>
+				</div>
+				<div class="col-12 col-md-3 text-truncate">
+					<a href="https://manes802.github.io" target="target_blank"><img src="img/icone_site.png" alt="site web" class="img-fluid"> manes802.github.io</a>
+				</div>
+			</div>	
+		</div>
+		<!-- /FIN PARTIE information personnel : Photo, nom et coordonnées -->
+
+		<!-- Section Competences, experiences et Formation -->
+		<section class="container-fluid">
+			<div class="row" id="ligne_carte">
+				<div class="card col-12 col-lg-4 border-info" id="carte_1">
+					<img src="img/competences2.png" alt="mes competences" class="card-img-top">
+					<div class="card-body" id="sous_carte_1">
+						<h2 class="h2 card-title font-weight-bold">Compétences</h2>
+						<p class="card-text">
+							Informatique Bureatique, Developpement Web (front-end) et Dessin.
+						</p>
+					</div>
+				</div>
+				<div class="card col-12 col-lg-4 border-info" id="carte_2">
+					<img src="img/experiences2.png" alt="mes experiences" class="card-img-top">
+					<div class="card-body" id="sous_carte_2">
+						<h2 class="card-title font-weight-bold">Expériences</h2>
+						<p class="card-text" id="mon_p">
+							Formateur en plein temps et prestataire de services informatique bureautique.
+						</p>
+					</div>
+				</div>
+				<div class="card col-12 col-lg-4 border-info" id="carte_3">
+					<img src="img/formations2.png" alt="mes formations" class="card-img-top">
+					<div class="card-body" id="sous_carte_3">
+						<h2 class="card-title font-weight-bold">Formations</h2>
+						<p class="card-text">
+							Educatel <strong>(en cours...)</strong>, OPENCLASSROOMS et l'Université la Francophonie de N'Djamena.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /Fin Section Competences, experiences et Formation -->	
+		
+		<footer class="bg-dark">
+			<!--Mentions pour la partie JS et JQuery -->
+			<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+			<!--Déclaration des bibliothèques jquery et javascript -->
+			<script src="jquery-3.3.1.min.js"></script>
+			<script src="bootstrap/js/bootstrap.bundle.js"></script>
+
+			<ul >
+				<li class="titre_liste"><a href="blog/blog.html">Blog</a></li>
+				<li><div class="rond_separateur"></div><a href="jeu_pendu.zip" class="titre_liste">Réalisations</a></li>
+				<li><div class="rond_separateur"></div><span class="titre_liste">Centre d'intérêt</span>
+					<ul class="sous_liste">
+						<li>Jeux vidéo</li>
+						<li>Sport</li>
+					</ul>
+				</li>
+				<li class="last_item"><div class="rond_separateur"></div><span class="titre_liste">Références</span>
+					<ul class="sous_liste">
+						<li><a href="mailto:dtaubesdusavoir@gmail.com" target="target_blank">KERTOUMAR Jackob</a></li>
+						<li><a href="mailto:faleizou51@gmail.com" target="target_blank">FALEIZOU JEAN-BAPTISTE Golgey</a></li>
+					</ul>
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>
